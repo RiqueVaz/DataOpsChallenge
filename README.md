@@ -6,4 +6,6 @@
 
 * No diretório principal está a pipeline em formato ```.js``` e também o questionário respondido.
 
+(Primeiro execute o ```data.py``` e depois o ```aggregation.py```)
+
 Para a execução da pipeline ser mais fácil pode-se usar o ```aggregation.py``` porém se você quiser, pode usar o ```mongosh``` ou outra forma que achar melhor com o ```aggregation.js```

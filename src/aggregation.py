@@ -26,7 +26,7 @@ pipeline = [
     { "$group": {
         "_id":   "$País",
         "Carros": {
-            "$push": {
+            "$addToSet": {
                 "Carro":     "$Carro",
                 "Cor":       "$Cor",
                 "Montadora": "$Montadora"

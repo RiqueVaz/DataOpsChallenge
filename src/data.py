@@ -28,6 +28,8 @@ df_montadoras = pd.DataFrame(dados_montadoras)
 client = MongoClient("mongodb://localhost:27017/")
 db = client["dataops_test"]
 
+db.Carros.delete_many({})
+db.Montadoras.delete_many({})
 
 # Inserção dos dados
 db.Carros.insert_many(df_carros.to_dict(orient="records"))

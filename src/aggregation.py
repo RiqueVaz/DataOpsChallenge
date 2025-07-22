@@ -1,3 +1,4 @@
+import json
 from pymongo import MongoClient
 
 
@@ -20,7 +21,7 @@ pipeline = [
         "Carro":     1,
         "Cor":       1,
         "Montadora": 1,
-        "País":      "$PaisCarros.País"
+        "País": "$PaisCarros.País"
     }},
     { "$group": {
         "_id":   "$País",
@@ -37,4 +38,4 @@ pipeline = [
 
 # Printa o resultado da pipeline
 for doc in db.Carros.aggregate(pipeline):
-    print(doc)
+    print(json.dumps(doc, ensure_ascii=False, indent=2))
